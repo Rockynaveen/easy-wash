@@ -622,3 +622,102 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
 
 });
+// =============user dropdown============
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const userToggle = document.querySelector(".user-toggle");
+    const wrapper = document.querySelector(".user-wrapper");
+
+    userToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // ❌ NOT LOGGED IN → OPEN LOGIN POPUP
+        if (!isLoggedIn) {
+            document.getElementById("modal").style.display = "flex";
+            return;
+        }
+
+        // ✅ LOGGED IN → TOGGLE DASHBOARD MENU
+        wrapper.classList.toggle("active");
+    });
+
+    // close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+        if (wrapper && !wrapper.contains(e.target)) {
+            wrapper.classList.remove("active");
+        }
+    });
+
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("modal");
+    const userIcon = document.getElementById("userIcon");
+    const closeBtn = document.querySelector(".close");
+
+    const loginTab = document.getElementById("loginTab");
+    const signupTab = document.getElementById("signupTab");
+
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signupForm");
+
+    const goSignup = document.getElementById("goSignup");
+    const goLogin = document.getElementById("goLogin");
+
+    const modalTitle = document.getElementById("modalTitle");
+
+    // OPEN MODAL
+    if (userIcon) {
+        userIcon.addEventListener("click", () => {
+            modal.style.display = "flex";
+            showLogin();
+        });
+    }
+
+    // CLOSE MODAL
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // CLOSE OUTSIDE CLICK
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // SHOW LOGIN
+    function showLogin() {
+        loginForm.classList.add("active");
+        signupForm.classList.remove("active");
+
+        loginTab.classList.add("active");
+        signupTab.classList.remove("active");
+
+        modalTitle.innerText = "Login";
+    }
+
+    // SHOW SIGNUP
+    function showSignup() {
+        signupForm.classList.add("active");
+        loginForm.classList.remove("active");
+
+        signupTab.classList.add("active");
+        loginTab.classList.remove("active");
+
+        modalTitle.innerText = "Sign Up";
+    }
+
+    // TAB CLICK EVENTS
+    loginTab.addEventListener("click", showLogin);
+    signupTab.addEventListener("click", showSignup);
+
+    // TEXT LINK SWITCH
+    goSignup.addEventListener("click", showSignup);
+    goLogin.addEventListener("click", showLogin);
+
+});

@@ -29,6 +29,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&amp;display=swap"
         rel="stylesheet">
@@ -42,6 +43,8 @@
 </head>
 
 <body>
+
+    <!-- ====mobile menu start========= -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo"><a href="home-laundry-services.html"><img src="assets/img/logo.jpeg"
@@ -49,65 +52,21 @@
             </div>
             <div class="th-mobile-menu">
                 <ul>
-                    <li class="menu-item-has-children"><a href="home-laundry-services.html">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="home-laundry-services.html">Laundry Services</a></li>
-                            <li><a href="home-dry-cleaning.html">Home Dry Cleaning</a></li>
-                            <li><a href="home-laundry-dry-services.html">Laundry & Dry Services</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li class="menu-item-has-children"><a href="#">Service</a>
-                        <ul class="sub-menu">
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="service-details.html">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                    <li><a href="cart.html">Cart Page</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="gallery.html">Proto Gallery</a></li>
-                            <li><a href="faq.html">Faq Page</a></li>
-                            <li><a href="price.html">Price Package</a></li>
-                            <li><a href="error.html">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a href="#">Blogs</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Blog Layout</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-grid-2-columns.html">Blog Grid 02 Columns</a></li>
-                                    <li><a href="blog-grid-3-columns.html">Blog Grid 03 Columns</a></li>
-                                    <li><a href="blog-list.html">Blog List</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blog.html">Blog Sidebar</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog.html">Blog No Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Videos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <!-- ====mobile menu end========= -->
+
+
     <!-- ========header start=========== -->
-    <header class="th-header header-layout1">
+    <header class="th-header header-layout1 sticky-top bg-white shadow-sm position-sticky top-0 w-100">
         <div class="header-top">
             <div class="container th-container">
                 <div class="row justify-content-center justify-content-lg-between align-items-center">
@@ -172,6 +131,7 @@
     </header>
     <!-- ============header end================= -->
 
+
     <!-- =========hero setion start============= -->
     <div class="th-hero-wrapper hero-1" id="hero">
         <div class="swiper th-slider hero-slider-1" id="heroSlide1" data-slider-options='{"effect":"slide"}'>
@@ -211,685 +171,446 @@
                 class="slider-arrow default"><i class="far fa-arrow-right"></i></button></div>
     </div>
     <!-- ==============hero section end================= -->
+
+
+
     <!-- =================about us start================== -->
-<div class="about-sec overflow-hidden space-top about-section" id="about-sec">
+    <div class="about-sec overflow-hidden space-top about-section" id="about-sec">
 
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
-            <!-- LEFT IMAGE -->
-            <div class="col-xl-6 about-left about-animate">
-                <div class="img-box1">
-                    <div class="img1">
-                        <img src="assets/img/aboutus.png" alt="About">
-                    </div>
-                    <div class="img2">
-                        <img src="assets/img/favicon.jpeg" alt="About">
+                <!-- LEFT IMAGE -->
+                <div class="col-xl-6 about-left about-animate">
+                    <div class="img-box1">
+                        <div class="img1">
+                            <img src="assets/img/aboutus.png" alt="About">
+                        </div>
+                        <div class="img2">
+                            <img src="assets/img/favicon.jpeg" alt="About">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- RIGHT CONTENT -->
-            <div class="col-xl-6 about-right">
+                <!-- RIGHT CONTENT -->
+                <div class="col-xl-6 about-right">
 
-                <div class="ps-xl-4">
+                    <div class="ps-xl-4">
 
-                    <!-- HEADING -->
-                    <div class="title-area mb-25 about-animate heading-anim">
-                        <span class="sub-title style1">About Us</span>
-                        <h2 class="sec-title mb-20">
-                            Experience the Pinnacle of Laundry Excellence
-                        </h2>
-                    </div>
+                        <!-- HEADING -->
+                        <div class="title-area mb-25 about-animate heading-anim">
+                            <span class="sub-title style1">About Us</span>
+                            <h2 class="sec-title mb-20">
+                                Experience the Pinnacle of Laundry Excellence
+                            </h2>
+                        </div>
 
-                    <!-- PARAGRAPH -->
-                    <p class="about-desc about-animate text-anim">
-                        Specify the range of services your laundry offers, including wash and fold,
-                        dry cleaning, ironing, stain removal, and special treatments.
-                    </p>
+                        <!-- PARAGRAPH -->
+                        <p class="about-desc about-animate text-anim">
+                            Specify the range of services your laundry offers, including wash and fold,
+                            dry cleaning, ironing, stain removal, and special treatments.
+                        </p>
 
-                    <!-- LIST -->
-                    <div class="checklist list-two-column about-animate list-anim">
-                        <ul>
-                            <li>Pickup and Delivery Service</li>
-                            <li>Energy-Efficient Machines</li>
-                            <li>Same-Day or Express Service</li>
-                            <li>Folding Preferences</li>
-                        </ul>
-                    </div>
+                        <!-- LIST -->
+                        <div class="checklist list-two-column about-animate list-anim">
+                            <ul>
+                                <li>Pickup and Delivery Service</li>
+                                <li>Energy-Efficient Machines</li>
+                                <li>Same-Day or Express Service</li>
+                                <li>Folding Preferences</li>
+                            </ul>
+                        </div>
 
-                    <!-- BUTTON -->
-                    <div class="btn-group mt-30 justify-content-start about-animate btn-anim">
-                        <a href="about.html" class="th-btn">More About Us</a>
+                        <!-- BUTTON -->
+                        <div class="btn-group mt-30 justify-content-start about-animate btn-anim">
+                            <a href="about.html" class="th-btn">More About Us</a>
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
-
         </div>
-    </div>
 
-</div>
+    </div>
     <!-- ========================about us end =================== -->
+
+
     <!-- ==========================features start================== -->
 
     <div class="overflow-hidden space" id="feature-area">
+
         <div class="container">
+
             <div class="row gy-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-item wow fadeInUp">
-                        <div class="feature-item_icon"><img src="assets/img/privacy.png" alt="icon"></div>
-                        <div class="media-body">
-                            <h3 class="box-title">100% Happiness Guarantee</h3>
-                            <p class="feature-item_text">Emphasize the use of high-quality detergents, fabric softeners.
-                            </p>
+
+                <!-- FEATURE 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+
+                    <div class="feature-item">
+
+                        <div class="feature-item_icon" data-aos="fade-down" data-aos-delay="150">
+
+                            <img src="assets/img/privacy.png" alt="icon">
+
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-item wow fadeInDown">
-                        <div class="feature-item_icon"><img src="assets/img/truck.png" alt="icon"></div>
+
                         <div class="media-body">
-                            <h3 class="box-title">Free Pick & Delivery</h3>
-                            <p class="feature-item_text">Emphasize the use of high-quality detergents, fabric softeners.
+
+                            <h3 class="box-title" data-aos="fade-up" data-aos-delay="200">
+                                100% Happiness Guarantee
+                            </h3>
+
+                            <p class="feature-item_text" data-aos="fade-up" data-aos-delay="250">
+                                Emphasize the use of high-quality detergents, fabric softeners.
                             </p>
+
                         </div>
+
                     </div>
+
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-item wow fadeInUp">
-                        <div class="feature-item_icon"><img src="assets/img/24-7.png" alt="icon"></div>
+
+                <!-- FEATURE 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+
+                    <div class="feature-item">
+
+                        <div class="feature-item_icon" data-aos="zoom-in" data-aos-delay="250">
+
+                            <img src="assets/img/truck.png" alt="icon">
+
+                        </div>
+
                         <div class="media-body">
-                            <h3 class="box-title">24/7 Dedicated Support</h3>
-                            <p class="feature-item_text">Emphasize the use of high-quality detergents, fabric softeners.
+
+                            <h3 class="box-title" data-aos="fade-up" data-aos-delay="300">
+                                Free Pick & Delivery
+                            </h3>
+
+                            <p class="feature-item_text" data-aos="fade-up" data-aos-delay="350">
+                                Emphasize the use of high-quality detergents, fabric softeners.
                             </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
+                <!-- FEATURE 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+
+                    <div class="feature-item">
+
+                        <div class="feature-item_icon" data-aos="zoom-in" data-aos-delay="350">
+
+                            <img src="assets/img/24-7.png" alt="icon">
+
+                        </div>
+
+                        <div class="media-body">
+
+                            <h3 class="box-title" data-aos="fade-up" data-aos-delay="400">
+                                24/7 Dedicated Support
+                            </h3>
+
+                            <p class="feature-item_text" data-aos="fade-up" data-aos-delay="450">
+                                Emphasize the use of high-quality detergents, fabric softeners.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
+
     </div>
     <!-- ===================================features end =================== -->
- <section class="bg-top-center space" data-bg-src="assets/img/bg/service_bg_1.jpg">
 
-    <div class="container-fluid position-relative">
 
-        <!-- TITLE -->
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title">Our Best Services</span>
-                <h2 class="sec-title">Our Best Laundry Services For You!</h2>
-            </div>
-        </div>
+    <!-- ========================servces section start========= -->
+    <section class="bg-top-center space" data-bg-src="assets/img/bg/service_bg_1.jpg">
 
-        <!-- SLIDER AREA -->
-        <div class="slider-area position-relative">
+        <div class="container-fluid position-relative">
 
-            <div class="swiper" id="serviceSlider1">
+            <!-- TITLE -->
+            <div class="container">
+                <div class="title-area text-center" data-aos="fade-down" data-aos-delay="100">
 
-                <div class="swiper-wrapper">
-
-                    <!-- SLIDE 1 -->
-                    <div class="swiper-slide">
-                        <div class="service-box">
-                            <div class="service-box_wrapper">
-                                <div class="service-box_img">
-                                    <img src="assets/img/service/service_box_1.jpg" alt="img">
-                                </div>
-                                <div class="service-box_icon">
-                                    <img src="assets/img/icon/service_box_1.svg" alt="Icon">
-                                </div>
-                            </div>
-                            <div class="box-content">
-                                <h3 class="box-title">
-                                    <a href="service-details.html">Dry Cleaning</a>
-                                </h3>
-                                <p class="service-box_text">
-                                    Dry cleaning is a method of cleaning clothing and textiles.
-                                </p>
-                                <a href="service-details.html" class="th-btn border">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 2 -->
-                    <div class="swiper-slide">
-                        <div class="service-box">
-                            <div class="service-box_wrapper">
-                                <div class="service-box_img">
-                                    <img src="assets/img/service/service_box_2.jpg" alt="img">
-                                </div>
-                                <div class="service-box_icon">
-                                    <img src="assets/img/icon/service_box_2.svg" alt="Icon">
-                                </div>
-                            </div>
-                            <div class="box-content">
-                                <h3 class="box-title">
-                                    <a href="service-details.html">Wash & Fold</a>
-                                </h3>
-                                <p class="service-box_text">
-                                    Laundry service offered by laundromats.
-                                </p>
-                                <a href="service-details.html" class="th-btn border">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 3 -->
-                    <div class="swiper-slide">
-                        <div class="service-box">
-                            <div class="service-box_wrapper">
-                                <div class="service-box_img">
-                                    <img src="assets/img/service/service_box_4.jpg" alt="img">
-                                </div>
-                                <div class="service-box_icon">
-                                    <img src="assets/img/icon/service_box_4.svg" alt="Icon">
-                                </div>
-                            </div>
-                            <div class="box-content">
-                                <h3 class="box-title">
-                                    <a href="service-details.html">Garments Transformed</a>
-                                </h3>
-                                <p class="service-box_text">
-                                    Various aspects of clothing and fashion.
-                                </p>
-                                <a href="service-details.html" class="th-btn border">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 4 -->
-                    <div class="swiper-slide">
-                        <div class="service-box">
-                            <div class="service-box_wrapper">
-                                <div class="service-box_img">
-                                    <img src="assets/img/service/service_box_5.jpg" alt="img">
-                                </div>
-                                <div class="service-box_icon">
-                                    <img src="assets/img/icon/service_box_5.svg" alt="Icon">
-                                </div>
-                            </div>
-                            <div class="box-content">
-                                <h3 class="box-title">
-                                    <a href="service-details.html">Household Textile Care</a>
-                                </h3>
-                                <p class="service-box_text">
-                                    Maintenance and cleaning of textiles.
-                                </p>
-                                <a href="service-details.html" class="th-btn border">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 5 -->
-                    <div class="swiper-slide">
-                        <div class="service-box">
-                            <div class="service-box_wrapper">
-                                <div class="service-box_img">
-                                    <img src="assets/img/service/service_box_1.jpg" alt="img">
-                                </div>
-                                <div class="service-box_icon">
-                                    <img src="assets/img/icon/service_box_6.svg" alt="Icon">
-                                </div>
-                            </div>
-                            <div class="box-content">
-                                <h3 class="box-title">
-                                    <a href="service-details.html">Leather & Suede Care</a>
-                                </h3>
-                                <p class="service-box_text">
-                                    Care for leather and suede materials.
-                                </p>
-                                <a href="service-details.html" class="th-btn border">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="sub-title">Our Best Services</span>
+                    <h2 class="sec-title">
+                        Our Best Laundry Services For You!
+                    </h2>
 
                 </div>
             </div>
 
-            <!-- ✅ ARROWS (VISIBLE & WORKING) -->
-            <button class="custom-arrow prev">&#10094;</button>
-            <button class="custom-arrow next">&#10095;</button>
+            <!-- SLIDER AREA -->
+            <div class="slider-area position-relative">
 
-        </div>
-    </div>
-</section>
-    <!-- <div class="space-bottom">
-        <div class="container">
-            <div class="row gy-4 justify-content-center">
-                <div class="col-lg-6">
-                    <div class="contact-feature" data-bg-src="assets/img/business-partner-1.jpg">
-                        <div class="box-icon"><i class="fa-light fa-phone"></i></div>
-                        <div class="media-body"><span class="contact-feature_subtitle">Call Us For Service</span>
-                            <h3 class="box-title"><a href="tel:+1636543569">+(163)-654-3569</a></h3>
-                            <p class="box-text">Call 24/7 Anytime For Our Laundry Servicing.</p>
+                <div class="swiper" id="serviceSlider1">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- SLIDE 1 -->
+                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="100">
+
+                            <div class="service-box">
+                                <div class="service-box_wrapper">
+
+                                    <div class="service-box_img">
+                                        <img src="assets/img/service/service_box_1.jpg" alt="img">
+                                    </div>
+
+                                    <div class="service-box_icon">
+                                        <img src="assets/img/icon/service_box_1.svg" alt="Icon">
+                                    </div>
+
+                                </div>
+
+                                <div class="box-content">
+                                    <h3 class="box-title">
+                                        <a href="service-details.html">Dry Cleaning</a>
+                                    </h3>
+                                    <p class="service-box_text">
+                                        Dry cleaning is a method of cleaning clothing and textiles.
+                                    </p>
+                                    <a href="#" class="th-btn border">Read More</a>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+
+                            <div class="service-box">
+                                <div class="service-box_wrapper">
+
+                                    <div class="service-box_img">
+                                        <img src="assets/img/service/service_box_2.jpg" alt="img">
+                                    </div>
+
+                                    <div class="service-box_icon">
+                                        <img src="assets/img/icon/service_box_2.svg" alt="Icon">
+                                    </div>
+
+                                </div>
+
+                                <div class="box-content">
+                                    <h3 class="box-title">
+                                        <a href="service-details.html">Wash & Fold</a>
+                                    </h3>
+                                    <p class="service-box_text">
+                                        Laundry service offered by laundromats.
+                                    </p>
+                                    <a href="#" class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+
+                            <div class="service-box">
+                                <div class="service-box_wrapper">
+
+                                    <div class="service-box_img">
+                                        <img src="assets/img/service/service_box_4.jpg" alt="img">
+                                    </div>
+
+                                    <div class="service-box_icon">
+                                        <img src="assets/img/icon/service_box_4.svg" alt="Icon">
+                                    </div>
+
+                                </div>
+
+                                <div class="box-content">
+                                    <h3 class="box-title">
+                                        <a href="service-details.html">Garments Transformed</a>
+                                    </h3>
+                                    <p class="service-box_text">
+                                        Various aspects of clothing and fashion.
+                                    </p>
+                                    <a href="service-details.html" class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 4 -->
+                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="400">
+
+                            <div class="service-box">
+                                <div class="service-box_wrapper">
+
+                                    <div class="service-box_img">
+                                        <img src="assets/img/service/service_box_5.jpg" alt="img">
+                                    </div>
+
+                                    <div class="service-box_icon">
+                                        <img src="assets/img/icon/service_box_5.svg" alt="Icon">
+                                    </div>
+
+                                </div>
+
+                                <div class="box-content">
+                                    <h3 class="box-title">
+                                        <a href="service-details.html">Household Textile Care</a>
+                                    </h3>
+                                    <p class="service-box_text">
+                                        Maintenance and cleaning of textiles.
+                                    </p>
+                                    <a href="service-details.html" class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 5 -->
+                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="500">
+
+                            <div class="service-box">
+                                <div class="service-box_wrapper">
+
+                                    <div class="service-box_img">
+                                        <img src="assets/img/service/service_box_1.jpg" alt="img">
+                                    </div>
+
+                                    <div class="service-box_icon">
+                                        <img src="assets/img/icon/service_box_6.svg" alt="Icon">
+                                    </div>
+
+                                </div>
+
+                                <div class="box-content">
+                                    <h3 class="box-title">
+                                        <a href="service-details.html">Leather & Suede Care</a>
+                                    </h3>
+                                    <p class="service-box_text">
+                                        Care for leather and suede materials.
+                                    </p>
+                                    <a href="service-details.html" class="th-btn border">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-feature" data-bg-src="assets/img/bg/contact_info_bg_1.jpg">
-                        <div class="box-icon"><i class="fa-light fa-envelope"></i></div>
-                        <div class="media-body"><span class="contact-feature_subtitle">Email Us Anytime For
-                                Service</span>
-                            <h3 class="box-title"><a href="mailto:info@Laun.com">info@laun.com</a>s</h3>
-                            <p class="box-text">Email 24/7 Anytime For Our Laundry Servicing.</p>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- ARROWS -->
+                <button class="custom-arrow prev">&#10094;</button>
+                <button class="custom-arrow next">&#10095;</button>
+
             </div>
         </div>
-    </div> -->
-    <section class="position-relative overflow-hidden space-bottom">
+    </section>
+
+    <!-- ==========service section end============= -->
+
+
+    <!-- ====================process section start============ -->
+
+    <section class="position-relative overflow-hidden space-bottom bg-process py-5">
         <div class="container-fluid">
-            <div class="title-area text-center"><span class="sub-title">Work Process</span>
+
+            <!-- TITLE -->
+            <div class="title-area text-center" data-aos="fade-down" data-aos-delay="100">
+
+                <span class="sub-title">Work Process</span>
                 <h2 class="sec-title">How We Work It!</h2>
             </div>
+
             <div class="step-wrap">
                 <div class="process-line"></div>
-                <div class="row gy-4  mx-5 justify-content-center">
-                    <div class="col-xl-3 col-md-6">
+
+                <div class="row gy-4 mx-5 justify-content-center">
+
+                    <!-- STEP 1 -->
+                    <div class="col-xl-3 col-md-6" data-aos="fade-right" data-aos-delay="200">
+
                         <div class="process-card">
-                            <div class="box-icon"><img src="assets/img/laundry.png" alt="icon"></div>
+
+                            <div class="box-icon" data-aos="zoom-in" data-aos-delay="250">
+                                <img src="assets/img/laundry.png" alt="icon">
+                            </div>
+
                             <div class="box-content">
                                 <div class="box-top">
                                     <p class="box-number">Step - 01</p>
                                     <h3 class="box-title">Schedule Pickup</h3>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+
+                    <!-- STEP 2 (CENTER / IMPORTANT STEP) -->
+                    <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+
                         <div class="process-card active">
-                            <div class="box-icon"><img src="assets/img/clothes-donation.png" alt="icon"></div>
+
+                            <div class="box-icon" data-aos="flip-left" data-aos-delay="250">
+                                <img src="assets/img/clothes-donation.png" alt="icon">
+                            </div>
+
                             <div class="box-content">
                                 <div class="box-top">
                                     <p class="box-number">Step - 02</p>
                                     <h3 class="box-title">Collection & Sorting</h3>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+
+                    <!-- STEP 3 -->
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
                         <div class="process-card">
-                            <div class="box-icon"><img src="assets/img/washing-clothes.png" alt="icon"></div>
+
+                            <div class="box-icon" data-aos="zoom-in" data-aos-delay="250">
+                                <img src="assets/img/washing-clothes.png" alt="icon">
+                            </div>
+
                             <div class="box-content">
                                 <div class="box-top">
                                     <p class="box-number">Step - 03</p>
                                     <h3 class="box-title">Professional Cleaning</h3>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
+
+                    <!-- STEP 4 -->
+                    <div class="col-xl-3 col-md-6" data-aos="fade-left" data-aos-delay="200">
+
                         <div class="process-card active">
-                            <div class="box-icon"><img src="assets/img/icon/process_card_3.svg" alt="icon"></div>
+
+                            <div class="box-icon" data-aos="zoom-in" data-aos-delay="250">
+                                <img src="assets/img/process_card_3.svg" alt="icon">
+                            </div>
+
                             <div class="box-content">
                                 <div class="box-top">
-                                    <p class="box-number">Step - 03</p>
+                                    <p class="box-number">Step - 04</p>
                                     <h3 class="box-title">Drying & Delivery</h3>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-
-    <div class="space overflow-hidden" id="faq-sec">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-xl-6 text-center text-xl-start align-self-center">
-                    <div class="">
-                        <div class="title-area text-center text-xl-start"><span class="sub-title style1">FAQ</span>
-                            <h2 class="sec-title">Frequently Asked Have Any Questions</h2>
-                        </div>
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-1"><button class="accordion-button"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1"
-                                        aria-expanded="true" aria-controls="collapse-1">What Services Do You
-                                        Offer?</button></div>
-                                <div id="collapse-1" class="accordion-collapse collapse show"
-                                    aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience
-                                            and if there's anything else we can do to make your laundry service even
-                                            better. We're always here to assist you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-2"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Do
-                                        You Have Certified Technicians?</button></div>
-                                <div id="collapse-2" class="accordion-collapse collapse"
-                                    aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience
-                                            and if there's anything else we can do to make your laundry service even
-                                            better. We're always here to assist you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-3"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-3" aria-expanded="false"
-                                        aria-controls="collapse-3">Can You Provide a Customized Service Plan?</button>
-                                </div>
-                                <div id="collapse-3" class="accordion-collapse collapse"
-                                    aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience
-                                            and if there's anything else we can do to make your laundry service even
-                                            better. We're always here to assist you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-4"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-4" aria-expanded="false"
-                                        aria-controls="collapse-4">What is Your Pricing Structure?</button></div>
-                                <div id="collapse-4" class="accordion-collapse collapse"
-                                    aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">We value your feedback! Let us know about your experience
-                                            and if there's anything else we can do to make your laundry service even
-                                            better. We're always here to assist you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="faq-img1 ps-xl-4">
-                        <div class="img1"><img src="assets/img/normal/faq_1_1.png" alt="faq"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="testi-area" id="testi-sec" data-bg-src="assets/img/bg1.png">
-
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
-                    <div class="testi-card-slide">
-                        <div class="title-area"><span class="sub-title style1">Testimonials</span>
-                            <h2 class="sec-title text-white">Our Clients Feedback</h2>
-                        </div>
-                        <div class="swiper th-slider" id="testiSlide1" data-slider-options='{"effect":"slide"}'>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testi-card">
-                                        <div class="testi-card_wrapp">
-                                            <div class="testi-card_profile">
-                                                <div class="testi-card_avater global-img"><img
-                                                        src="assets/img/testimonial/testi_1_1.jpg" alt="Avater"></div>
-                                                <div class="star-icon"><a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a> <a href="#"><i
-                                                            class="fa-solid fa-star"></i></a> <a href="#"><i
-                                                            class="fa-solid fa-star"></i></a> <a href="#"><i
-                                                            class="fa-regular fa-star"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="testi-card_wrapper">
-                                                <p class="testi-card_text">“If you opted for pickup and delivery, our
-                                                    dedicated team will bring your laundry back to your doorstep at the
-                                                    scheduled time. For drop-offs, your clean clothes will be waiting.”
-                                                </p>
-                                                <div class="testimonial-author">
-                                                    <div class="testi-card_content">
-                                                        <h3 class="testi-card_name">Alex Michel</h3><span
-                                                            class="testi-card_desig">Founder CEO</span>
-                                                    </div>
-                                                    <div class="testi-quote"><img src="assets/img/icon/quote.svg"
-                                                            alt=""></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testi-card">
-                                        <div class="testi-card_wrapp">
-                                            <div class="testi-card_profile">
-                                                <div class="testi-card_avater global-img"><img
-                                                        src="assets/img/testimonial/testi_1_2.jpg" alt="Avater"></div>
-                                                <div class="star-icon"><a href="#"><i class="fa-solid fa-star"></i></a>
-                                                    <a href="#"><i class="fa-solid fa-star"></i></a> <a href="#"><i
-                                                            class="fa-solid fa-star"></i></a> <a href="#"><i
-                                                            class="fa-solid fa-star"></i></a> <a href="#"><i
-                                                            class="fa-regular fa-star"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="testi-card_wrapper">
-                                                <p class="testi-card_text">“If you opted for pickup and delivery, our
-                                                    dedicated team will bring your laundry back to your doorstep at the
-                                                    scheduled time. For drop-offs, your clean clothes will be waiting.”
-                                                </p>
-                                                <div class="testimonial-author">
-                                                    <div class="testi-card_content">
-                                                        <h3 class="testi-card_name">Jenny Wilson</h3><span
-                                                            class="testi-card_desig">Project Manager</span>
-                                                    </div>
-                                                    <div class="testi-quote"><img src="assets/img/icon/quote.svg"
-                                                            alt=""></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="testi-area-wrapper">
-                        <form action="#" method="POST" class="testi-form input-smoke ajax-contact">
-                            <h3 class="sec-title text-center">Book An Appointment</h3>
-                            <div class="row">
-                                <div class="form-group col-12"><input type="text" class="form-control" name="name"
-                                        id="name" placeholder="Your Name"> <i class="fal fa-user"></i></div>
-                                <div class="form-group col-12"><input type="email" class="form-control" name="email"
-                                        id="email" placeholder="Email Address"> <i class="fal fa-envelope"></i></div>
-                                <div class="form-group col-12"><select name="subject" id="subject"
-                                        class="form-select nice-select">
-                                        <option value="" disabled="disabled" selected="selected" hidden>Select Service
-                                        </option>
-                                        <option value="Dry Cleaning">Dry Cleaning</option>
-                                        <option value="Wash & Fold">Wash & Fold</option>
-                                        <option value="Ironing/Pressing">Ironing/Pressing</option>
-                                        <option value="Garments Transformed">Garments Transformed</option>
-                                        <option value="Household Textile Care">Household Textile Care</option>
-                                        <option value="Household Textile Care">Household Textile Care</option>
-                                    </select></div>
-                                <div class="form-group col-12"><textarea name="message" id="message" cols="30" rows="3"
-                                        class="form-control" placeholder="Your Message"></textarea> <i
-                                        class="fal fa-pencil"></i></div>
-                                <div class="form-btn col-12"><button class="th-btn btn-fw">Appointment Now</button>
-                                </div>
-                            </div>
-                            <p class="form-messages mb-0 mt-3"></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-  <section class="space price-section">
-    <div class="container">
-
-        <div class="title-area text-center">
-            <span class="sub-title">What We Offer</span>
-            <h2 class="sec-title">Affordable Price Package</h2>
-        </div>
-
-        <div class="row gy-4 justify-content-center">
-
-            <!-- CARD 1 -->
-            <div class="col-xl-4 col-md-6">
-                <div class="price-card animate-price">
-                    <h3 class="box-title">Dry Cleaning Price</h3>
-                    <div class="price-card_content">
-                        <h4 class="price-card_price"><span class="currency">$</span>80</h4>
-                        <p class="price-card_text">20 CLOTHES PER MONTH</p>
-
-                        <div class="available-list">
-                            <ul>
-                                <li>4 T-Shirts</li>
-                                <li>3 Button-Down Shirts</li>
-                                <li>7 Pairs of Underwear</li>
-                                <li>6 Pairs of Socks</li>
-                                <li class="unavailable">8 Towel</li>
-                                <li class="unavailable">2 Set of Bed Sheets</li>
-                            </ul>
-                        </div>
-
-                        <a href="price.html" class="th-btn style3">Choose Packages</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD 2 (ACTIVE) -->
-            <div class="col-xl-4 col-md-6">
-                <div class="price-card animate-price active">
-                    <h3 class="box-title">Dry Clean / Laundry</h3>
-                    <div class="price-card_content">
-                        <h4 class="price-card_price"><span class="currency">$</span>140</h4>
-                        <p class="price-card_text">28 CLOTHES PER MONTH</p>
-
-                        <div class="available-list">
-                            <ul>
-                                <li>4 T-Shirts</li>
-                                <li>3 Button-Down Shirts</li>
-                                <li>7 Pairs of Underwear</li>
-                                <li>6 Pairs of Socks</li>
-                                <li>8 Towel</li>
-                                <li class="unavailable">2 Set of Bed Sheets</li>
-                            </ul>
-                        </div>
-
-                        <a href="price.html" class="th-btn style3">Choose Packages</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="col-xl-4 col-md-6">
-                <div class="price-card animate-price">
-                    <h3 class="box-title">Dry Clean / Fold</h3>
-                    <div class="price-card_content">
-                        <h4 class="price-card_price"><span class="currency">$</span>180</h4>
-                        <p class="price-card_text">30 CLOTHES PER MONTH</p>
-
-                        <div class="available-list">
-                            <ul>
-                                <li>4 T-Shirts</li>
-                                <li>3 Button-Down Shirts</li>
-                                <li>7 Pairs of Underwear</li>
-                                <li>6 Pairs of Socks</li>
-                                <li>8 Towel</li>
-                                <li>2 Set of Bed Sheets</li>
-                            </ul>
-                        </div>
-
-                        <a href="price.html" class="th-btn style3">Choose Packages</a>
-                    </div>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
-<!-- =====monthly packages  start===== -->
- <div class="side-popup">
-    <div class="side-popup-text">
-        Monthly Packages Available
-    </div>
-</div>
-<!-- ===========monthly packges end====== -->
 
-
-    <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_1.jpg">
-        <div class="widget-area">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="widget footer-widget">
-                            <div class="th-widget-about">
-                                <div class="about-logo"><a href="#"><img src="assets/img/logo.png" alt="Laun"></a></div>
-                                <p class="about-text">Begin by scheduling your laundry service. You can choose from our
-                                    convenient options Any visible stains are pre-treated to ensure.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-auto">
-                        <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Our Services</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu style2">
-                                    <li><a href="service.html">Dry Cleaning</a></li>
-                                    <li><a href="service.html">Quick Wash Express</a></li>
-                                    <li><a href="service.html">Dust Removal</a></li>
-                                    <li><a href="service.html">Stain Master Pro</a></li>
-                                    <li><a href="service.html">Damage Repair</a></li>
-                                    <li><a href="service.html">Eco Fresh Laundryy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-xl-auto">
-                        <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Contact Us</h3>
-                            <div class="footer-info-wrapper">
-                                <div class="footer-info">
-                                    <div class="footer-info_icon"><i class="fa-sharp fa-solid fa-phone"></i></div><a
-                                        class="text-inherit" href="tel:+256214203215">+256 214 203 215</a>
-                                </div>
-                                <div class="footer-info">
-                                    <div class="footer-info_icon"><i class="fas fa-envelope"></i></div><a
-                                        class="text-inherit" href="mailto:info@laun.com">info@laun.com</a>
-                                </div>
-                                <div class="footer-info">
-                                    <div class="footer-info_icon">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                    </div>
-                                    <a class="text-inherit">Nk Towers,Madhapur,Hyderabad</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="copyright-wrap">
-            <div class="container">
-                <div class="row gy-2 align-items-center">
-                    <div class="col-md-6">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2023 <a
-                                href="home-laundry-services.html">Easy Wash</a>. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a
-                                href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- BUBBLES (optional keep as is) -->
         <div class="animation-bubble">
             <div class="bubble-1"></div>
             <div class="bubble-2"></div>
@@ -902,24 +623,713 @@
             <div class="bubble-9"></div>
             <div class="bubble-10"></div>
         </div>
-        <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-left="0%"><img
-                src="assets/img/shape/footer_shape_1.png" alt="shape"></div>
-        <div class="shape-mockup jump d-none d-xl-block" data-bottom="0%" data-right="0%"><img
-                src="assets/img/shape/footer_shape_2.png" alt="shape"></div>
+
+    </section>
+
+    <!-- ================== process section end ============================== -->
+
+    <!-- ============our packages section start ================== -->
+    <section class="package-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6">
+
+                    <div class="package-content">
+
+                        <span class="sub-title" data-aos="fade-up" data-aos-delay="100">
+                            Our Packages
+                        </span>
+
+                        <h2 class="sec-title" data-aos="fade-up" data-aos-delay="200">
+                            Affordable Laundry Plans for Everyone
+                        </h2>
+
+                        <p data-aos="fade-up" data-aos-delay="300">
+                            Choose from our flexible laundry packages designed for your daily needs.
+                            Enjoy premium cleaning, quick turnaround, and doorstep delivery at the best price.
+                        </p>
+
+                        <!-- FEATURES -->
+                        <ul class="package-list text-dark">
+
+                            <li data-aos="fade-right" data-aos-delay="400">✔ Free Pickup & Delivery</li>
+                            <li data-aos="fade-right" data-aos-delay="500">✔ Eco-Friendly Cleaning</li>
+                            <li data-aos="fade-right" data-aos-delay="600">✔ Fast 24-48 Hours Service</li>
+                            <li data-aos="fade-right" data-aos-delay="700">✔ Affordable Pricing Plans</li>
+
+                        </ul>
+
+                        <!-- BUTTON -->
+                        <a href="#" class="th-btn my-3" data-aos="zoom-in" data-aos-delay="800">
+                            Book a Package
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-6 text-center">
+
+                    <div class="package-image">
+
+                        <img src="assets/img/washing-machine.png" alt="Laundry Package" class="img-fluid rounded"
+                            data-aos="fade-left" data-aos-delay="300">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===========our packages section end  =============== -->
+
+    <!-- ======================faq section start======= -->
+
+    <div class="space overflow-hidden" id="faq-sec">
+        <div class="container">
+            <div class="row align-items-end">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-xl-6 text-center text-xl-start align-self-center">
+
+                    <div>
+
+                        <!-- TITLE -->
+                        <div class="title-area text-center text-xl-start" data-aos="fade-down" data-aos-delay="100">
+
+                            <span class="sub-title style1">FAQ</span>
+
+                            <h2 class="sec-title">
+                                Frequently Asked Have Any Questions
+                            </h2>
+                        </div>
+
+                        <!-- ACCORDION -->
+                        <div class="accordion" id="faqAccordion">
+
+                            <div class="accordion-card" data-aos="fade-right" data-aos-delay="200">
+
+                                <div class="accordion-header" id="collapse-item-1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-1" aria-expanded="true">
+                                        What Services Do You Offer?
+                                    </button>
+                                </div>
+
+                                <div id="collapse-1" class="accordion-collapse collapse show"
+                                    data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        <p class="faq-text">
+                                            We value your feedback! Let us know about your experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card" data-aos="fade-right" data-aos-delay="300">
+
+                                <div class="accordion-header" id="collapse-item-2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-2">
+                                        Do You Have Certified Technicians?
+                                    </button>
+                                </div>
+
+                                <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        <p class="faq-text">
+                                            We value your feedback! Let us know about your experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card" data-aos="fade-right" data-aos-delay="400">
+
+                                <div class="accordion-header" id="collapse-item-3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-3">
+                                        Can You Provide a Customized Service Plan?
+                                    </button>
+                                </div>
+
+                                <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        <p class="faq-text">
+                                            We value your feedback! Let us know about your experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card" data-aos="fade-right" data-aos-delay="500">
+
+                                <div class="accordion-header" id="collapse-item-4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-4">
+                                        What is Your Pricing Structure?
+                                    </button>
+                                </div>
+
+                                <div id="collapse-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                                    <div class="accordion-body">
+                                        <p class="faq-text">
+                                            We value your feedback! Let us know about your experience.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <div class="col-xl-6">
+
+                    <div class="faq-img1 ps-xl-4" data-aos="fade-left" data-aos-delay="200">
+
+                        <div class="img1">
+                            <img src="assets/img/faq_1_1.png" alt="faq" data-aos="zoom-in" data-aos-delay="300">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================faq section end ============== -->
+
+    <!-- =================testimonials  section start=============== -->
+    <section class="testi-area overflow-hidden" id="testi-sec" data-bg-src="assets/img/bg1.png">
+
+        <div class="container">
+
+            <div class="row align-items-center g-4">
+
+                <!-- LEFT SIDE -->
+                <div class="col-xl-6 col-lg-6 col-12" data-aos="fade-right" data-aos-delay="200">
+
+                    <div class="testi-card-slide">
+
+                        <!-- TITLE -->
+                        <div class="title-area" data-aos="fade-down" data-aos-delay="250">
+
+                            <span class="sub-title style1">Testimonials</span>
+                            <h2 class="sec-title text-white">
+                                Our Clients Feedback
+                            </h2>
+
+                        </div>
+
+                        <!-- SWIPER SAFE WRAPPER -->
+                        <div class="swiper th-slider" id="testiSlide1" style="max-width: 100%; overflow: hidden;"
+                            data-slider-options='{"effect":"slide"}'>
+
+                            <div class="swiper-wrapper">
+
+                                <!-- SLIDE 1 -->
+                                <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+
+                                    <div class="testi-card">
+
+                                        <div class="testi-card_wrapp">
+
+                                            <div class="testi-card_profile">
+
+                                                <div class="testi-card_avater global-img">
+                                                    <img src="assets/img/testimonial/testi_1_1.jpg" alt="">
+                                                </div>
+
+                                                <div class="star-icon">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="testi-card_wrapper">
+
+                                                <p class="testi-card_text">
+                                                    “If you opted for pickup and delivery, our team brings laundry to
+                                                    your doorstep.”
+                                                </p>
+
+                                                <div class="testimonial-author">
+
+                                                    <div class="testi-card_content">
+                                                        <h3 class="testi-card_name">Alex Michel</h3>
+                                                        <span class="testi-card_desig">Founder CEO</span>
+                                                    </div>
+
+                                                    <div class="testi-quote">
+                                                        <img src="assets/img/icon/quote.svg" alt="">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- SLIDE 2 -->
+                                <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="350">
+
+                                    <div class="testi-card">
+
+                                        <div class="testi-card_wrapp">
+
+                                            <div class="testi-card_profile">
+
+                                                <div class="testi-card_avater global-img">
+                                                    <img src="assets/img/testimonial/testi_1_2.jpg" alt="">
+                                                </div>
+
+                                                <div class="star-icon">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="testi-card_wrapper">
+
+                                                <p class="testi-card_text">
+                                                    “Great service and fast delivery. Highly recommended!”
+                                                </p>
+
+                                                <div class="testimonial-author">
+
+                                                    <div class="testi-card_content">
+                                                        <h3 class="testi-card_name">Jenny Wilson</h3>
+                                                        <span class="testi-card_desig">Project Manager</span>
+                                                    </div>
+
+                                                    <div class="testi-quote">
+                                                        <img src="assets/img/icon/quote.svg" alt="">
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="col-xl-6 col-lg-6 col-12" data-aos="fade-left" data-aos-delay="200">
+
+                    <div class="testi-area-wrapper">
+
+                        <form class="testi-form input-smoke ajax-contact">
+
+                            <h3 class="sec-title text-center" data-aos="fade-down" data-aos-delay="250">
+                                Book An Appointment
+                            </h3>
+
+                            <div class="row g-3">
+
+                                <div class="form-group col-12" data-aos="fade-up" data-aos-delay="300">
+
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                    <i class="fal fa-user"></i>
+
+                                </div>
+
+                                <div class="form-group col-12" data-aos="fade-up" data-aos-delay="350">
+
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <i class="fal fa-envelope"></i>
+
+                                </div>
+
+                                <div class="form-group col-12" data-aos="fade-up" data-aos-delay="400">
+
+                                    <select class="form-select nice-select">
+                                        <option>Select Service</option>
+                                        <option>Dry Cleaning</option>
+                                        <option>Wash & Fold</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="form-group col-12" data-aos="fade-up" data-aos-delay="450">
+
+                                    <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                                    <i class="fal fa-pencil"></i>
+
+                                </div>
+
+                                <div class="form-btn col-12" data-aos="zoom-in" data-aos-delay="500">
+
+                                    <button class="th-btn btn-fw">
+                                        Appointment Now
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =================testimonials  section end================= -->
+
+
+    <!-- ==================packages section start========= -->
+
+    <section class="space price-section">
+        <div class="container">
+
+            <!-- TITLE -->
+            <div class="title-area text-center" data-aos="fade-down" data-aos-delay="100">
+
+                <span class="sub-title">What We Offer</span>
+                <h2 class="sec-title">Affordable Price Package</h2>
+            </div>
+
+            <div class="row gy-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-xl-4 col-md-6" data-aos="fade-right" data-aos-delay="200">
+
+                    <div class="price-card animate-price">
+
+                        <h3 class="box-title" data-aos="fade-up" data-aos-delay="250">
+                            Dry Cleaning Price
+                        </h3>
+
+                        <div class="price-card_content">
+
+                            <h4 class="price-card_price" data-aos="zoom-in" data-aos-delay="300">
+                                <span class="currency">₹</span>80
+                            </h4>
+
+                            <p class="price-card_text" data-aos="fade-up" data-aos-delay="350">
+                                20 CLOTHES PER MONTH
+                            </p>
+
+                            <div class="available-list" data-aos="fade-up" data-aos-delay="400">
+
+                                <ul>
+                                    <li>4 T-Shirts</li>
+                                    <li>3 Button-Down Shirts</li>
+                                    <li>7 Pairs of Underwear</li>
+                                    <li>6 Pairs of Socks</li>
+                                    <li class="unavailable">8 Towel</li>
+                                    <li class="unavailable">2 Set of Bed Sheets</li>
+                                </ul>
+
+                            </div>
+
+                            <a href="price.html" class="th-btn style3" data-aos="zoom-in" data-aos-delay="450">
+                                Book Now
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 (ACTIVE) -->
+                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+
+                    <div class="price-card animate-price active">
+
+                        <h3 class="box-title" data-aos="fade-up" data-aos-delay="250">
+                            Dry Clean / Laundry
+                        </h3>
+
+                        <div class="price-card_content">
+
+                            <h4 class="price-card_price" data-aos="flip-up" data-aos-delay="300">
+                                <span class="currency">₹</span>140
+                            </h4>
+
+                            <p class="price-card_text" data-aos="fade-up" data-aos-delay="350">
+                                28 CLOTHES PER MONTH
+                            </p>
+
+                            <div class="available-list" data-aos="fade-up" data-aos-delay="400">
+
+                                <ul>
+                                    <li>4 T-Shirts</li>
+                                    <li>3 Button-Down Shirts</li>
+                                    <li>7 Pairs of Underwear</li>
+                                    <li>6 Pairs of Socks</li>
+                                    <li>8 Towel</li>
+                                    <li class="unavailable">2 Set of Bed Sheets</li>
+                                </ul>
+
+                            </div>
+
+                            <a href="price.html" class="th-btn style3" data-aos="zoom-in" data-aos-delay="450">
+                                Book Now
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-xl-4 col-md-6" data-aos="fade-left" data-aos-delay="200">
+
+                    <div class="price-card animate-price">
+
+                        <h3 class="box-title" data-aos="fade-up" data-aos-delay="250">
+                            Dry Clean / Fold
+                        </h3>
+
+                        <div class="price-card_content">
+
+                            <h4 class="price-card_price" data-aos="zoom-in" data-aos-delay="300">
+                                <span class="currency">₹</span>180
+                            </h4>
+
+                            <p class="price-card_text" data-aos="fade-up" data-aos-delay="350">
+                                30 CLOTHES PER MONTH
+                            </p>
+
+                            <div class="available-list" data-aos="fade-up" data-aos-delay="400">
+
+                                <ul>
+                                    <li>4 T-Shirts</li>
+                                    <li>3 Button-Down Shirts</li>
+                                    <li>7 Pairs of Underwear</li>
+                                    <li>6 Pairs of Socks</li>
+                                    <li>8 Towel</li>
+                                    <li>2 Set of Bed Sheets</li>
+                                </ul>
+
+                            </div>
+
+                            <a href="price.html" class="th-btn style3" data-aos="zoom-in" data-aos-delay="450">
+                                Book Now </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============packages section end  ================ -->
+
+    <!-- ======================franchise section start ============== -->
+    <section class="cta-sec" data-pos-for=".team-area" data-sec-pos="bottom-half">
+        <div class="container th-container">
+            <div class="cta-area" data-overlay="title" data-opacity="9" data-bg-src="assets/img/business-partner-1.jpg">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-6 mb-5 mb-lg-0">
+                        <div class="title-area mb-0 text-center text-lg-start"><span class="sub-title style1">Grow With
+                                Easy Wash</span>
+                            <h2 class="sec-title text-white">Partner With Us & Expand Your Laundry Business!</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="cta-group justify-content-lg-end justify-content-center"><a href="service.html"
+                                class="th-btn style2">Get Our Services</a> <a href="contact.html"
+                                class="th-btn style3">Contact Us Now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==============franchise section end ============ -->
+
+    <!-- =====monthly packages  start===== -->
+    <div class="side-popup">
+        <div class="side-popup-text">
+            Monthly Packages Available
+        </div>
+    </div>
+    <!-- ===========monthly packges end====== -->
+
+
+    <!-- ===========footer start======== -->
+
+    <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_1.jpg">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    <!-- 1. LOGO / ABOUT -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="#">
+                                        <img src="assets/img/logo.png" alt="Laun">
+                                    </a>
+                                </div>
+                                <p class="about-text">
+                                    Begin by scheduling your laundry service. You can choose from our convenient
+                                    options.
+                                </p>
+                                <div class="th-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. QUICK LINKS -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <ul class="menu style2">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. OUR SERVICES -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Our Services</h3>
+                            <ul class="menu style2">
+                                <li><a href="service.html">Dry Cleaning</a></li>
+                                <li><a href="service.html">Wash & Fold</a></li>
+                                <li><a href="service.html">Pickup & Delivery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 4. CONTACT -->
+                    <div class="col-lg-4 col-md-6 contact-widget">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Contact Us</h3>
+
+                            <div class="footer-info-wrapper">
+
+                                <div class="footer-info">
+                                    <div class="footer-info_icon">
+                                        <i class="fa-sharp fa-solid fa-phone"></i>
+                                    </div>
+                                    <a href="tel:+919876543210">+91 9876543210</a>
+                                </div>
+
+                                <div class="footer-info">
+                                    <div class="footer-info_icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <a href="mailto:easywash@laun.com">easywash@laun.com</a>
+                                </div>
+
+                                <div class="footer-info">
+                                    <div class="footer-info_icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <a href="#">30,Survey No,72,73, NK Towers, Flat No 101,Plot No, near Capital Park
+                                        Road, Madhapur, Hyderabad, Telangana 500081</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="soap-bubbles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row gy-2 align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright-text">
+                            Copyright <i class="fal fa-copyright"></i> 2023
+                            <a href="home-laundry-services.html">Easy Wash</a>. All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="copyright-text">
+                            Designed by :
+                            <a href="home-laundry-services.html">Sunseaz</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </footer>
-    <!-- LOGIN SIGNUP POPUP -->
+
+    <!-- =================footer end ========== -->
+
+    <!-- ========= LOGIN / SIGNUP MODAL ========= -->
     <div id="modal" class="modal">
         <div class="modal-content">
+
             <span class="close">&times;</span>
 
-            <h2>Login</h2>
+            <!-- DYNAMIC TITLE -->
+            <h2 id="modalTitle">Login</h2>
 
+            <!-- TABS -->
             <div class="tabs">
                 <button id="loginTab" class="active">Login</button>
                 <button id="signupTab">Signup</button>
             </div>
 
-            <!-- Login -->
+            <!-- LOGIN FORM -->
             <div id="loginForm" class="form active">
                 <input type="email" placeholder="Email Address">
                 <input type="password" placeholder="Password">
@@ -927,16 +1337,22 @@
                 <p>Not a member? <span id="goSignup">Signup now</span></p>
             </div>
 
-            <!-- Signup -->
+            <!-- SIGNUP FORM -->
             <div id="signupForm" class="form">
                 <input type="text" placeholder="Full Name">
                 <input type="email" placeholder="Email Address">
+                <input type="number" placeholder="Mobile No">
                 <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+
                 <button class="btn">Signup</button>
                 <p>Already have account? <span id="goLogin">Login</span></p>
             </div>
+
         </div>
     </div>
+
+    <!-- ======login /sign up modal end ======== -->
 
     <a href="https://wa.me/919392664710" class="whatapp_sticky" target="_blank">
         <i class="fa-brands fa-whatsapp whatapp_icon"></i>
@@ -951,12 +1367,23 @@
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/nice-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         document.getElementById("userIcon").addEventListener("click", function () {
             document.getElementById("modal").style.display = "flex";
         });
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,   // 🔥 THIS makes animation repeat every scroll
+            offset: 120
+        });
+    </script>
+
+
 </body>
 
 </html>
