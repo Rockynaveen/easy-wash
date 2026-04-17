@@ -501,7 +501,7 @@ select,
 .form-select,
 textarea,
 input {
-    height: 35px;
+    height: 56px;
     padding: 0 25px 0 25px;
     padding-right: 45px;
     border: 1px solid transparent;
@@ -522,7 +522,7 @@ textarea:focus,
 input:focus {
     outline: 0;
     box-shadow: none;
-    border-color: var(--theme-color);
+    border-color:#dd9d08;
     background-color: var(--smoke-color)
 }
 
@@ -4559,7 +4559,7 @@ a.text-theme:hover,
 .widget-call .call {
     font-size: 30px;
     font-weight: 600;
-    color: var(--theme-color);
+    color: #dd9d08;
     display: block;
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
@@ -5634,12 +5634,12 @@ ol.wp-block-rss {
     font-weight: 600;
     font-size: 14px;
     font-family: var(--body-font);
-    color: var(--title-color);
+    color:#0056b3;
     text-transform: uppercase
 }
 
 .main-menu a:hover {
-    color: var(--theme-color)
+    color:#dd9d08;
 }
 
 .main-menu>ul>li {
@@ -6735,7 +6735,7 @@ ol.wp-block-rss {
 }
 
 .footer-layout1 .th-social a:hover {
-    background-color: var(--title-color);
+    background-color:#dd9d08;
     color: var(--white-color)
 }
 
@@ -7187,7 +7187,7 @@ ol.wp-block-rss {
 }
 
 .info-box_link:hover {
-    color: var(--theme-color)
+    color: #dd9d08;
 }
 
 .footer-top-newsletter {
@@ -19931,3 +19931,13 @@ span.select2-selection.select2-selection--single:focus {
         opacity: 0;
     }
 }
+
+
+
+
+
+
+
+
+
+/* ==============================mobile drop down ==== */
