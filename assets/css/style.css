@@ -1,4 +1,4 @@
-@use "sass:math";
+/* @use "sass:math";
 
 :root {
     --theme-color: #8CC63F;
@@ -19299,12 +19299,13 @@ span.select2-selection.select2-selection--single:focus {
 /* BUTTON */
 .btn {
     width: 100%;
-    padding: 10px;
+    padding: 10px ;
     border: none;
     background: linear-gradient(to right, #2946B8, #dd9d08);
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    /* margin-bottom:5px !important; */
 }
 
 /* LINKS */
@@ -19644,7 +19645,7 @@ span.select2-selection.select2-selection--single:focus {
 .dashboard-sidebar ul li a:hover,
 .dashboard-sidebar ul li a.active {
     background: #2563eb;
-    color: white;
+    color: white !important;
 }
 
 .card-box {
@@ -19962,3 +19963,21 @@ span.select2-selection.select2-selection--single:focus {
     }
 }
 
+/* ================== */
+/* Make modal content wider */
+#bookingModal .contact-wrapper {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+}
+
+/* Increase modal width */
+#bookingModal > div {
+    max-width: 1000px !important;
+    width: 95% !important;
+}
+
+/* Optional: better spacing */
+#bookingModal .container {
+    padding: 30px;
+}
+ */

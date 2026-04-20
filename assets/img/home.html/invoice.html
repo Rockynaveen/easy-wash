@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="p-4">
+
+    <div class="container">
+        <div class="card p-4">
+            <button class="btn btn-outline-primary mb-3" onclick="goBack()">← Back</button>
+
+            <h2>Invoice</h2>
+            <hr>
+
+            <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+            <p><strong>Service:</strong> Dry Cleaning</p>
+            <p><strong>Amount:</strong> ₹500</p>
+            <p><strong>Status:</strong> Completed</p>
+
+            <hr>
+
+            <button class="btn btn-success my-3" onclick="downloadInvoice()">Download Invoice</button>
+            <button class="btn btn-secondary" onclick="window.print()">Print Invoice</button>
+
+        </div>
+    </div>
+
+    <script>
+        // Get order ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const orderId = params.get("orderId");
+
+        document.getElementById("orderId").innerText = "#" + orderId;
+
+        function downloadInvoice() {
+            alert("Downloading invoice...");
+            // later: generate PDF from backend
+        }
+    </script>
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "bookings.html";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

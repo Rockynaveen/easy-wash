@@ -1,12 +1,18 @@
-! function (e) {
+!function (e) {
     "use strict";
-    if (e(window).on("load", (function () {
-        e(".preloader").fadeOut()
-    })), e(".nice-select").length && e(".nice-select").niceSelect(), e(".preloader").length > 0 && e(".preloaderCls").each((function () {
-        e(this).on("click", (function (t) {
-            t.preventDefault(), e(".preloader").css("display", "none")
-        }))
-    })), e.fn.thmobilemenu = function (t) {
+
+    /* ================= PRELOADER ================= */
+    e(window).on("load", function () {
+        e(".preloader").fadeOut();
+    });
+
+    /* ================= NICE SELECT ================= */
+    if (e(".nice-select").length) {
+        e(".nice-select").niceSelect();
+    }
+
+    /* ================= MOBILE MENU ================= */
+    e.fn.thmobilemenu = function (t) {
         var a = e.extend({
             menuToggleBtn: ".th-menu-toggle",
             bodyToggleClass: "th-body-visible",
@@ -18,403 +24,51 @@
             subMenuToggleClass: "th-open",
             toggleSpeed: 400
         }, t);
-        return this.each((function () {
+
+        return this.each(function () {
             var t = e(this);
 
-            function n() {
+            function toggleMenu() {
                 t.toggleClass(a.bodyToggleClass);
-                var n = "." + a.subMenuClass;
-                e(n).each((function () {
-                    e(this).hasClass(a.subMenuToggleClass) && (e(this).removeClass(a.subMenuToggleClass), e(this).css("display", "none"), e(this).parent().removeClass(a.subMenuParentToggle))
-                }))
             }
-            t.find("li").each((function () {
-                var t = e(this).find("ul");
-                t.addClass(a.subMenuClass), t.css("display", "none"), t.parent().addClass(a.subMenuParent), t.prev("a").append(a.appendElement), t.next("a").append(a.appendElement)
-            }));
-            var o = "." + a.meanExpandClass;
-            e(o).each((function () {
-                e(this).on("click", (function (t) {
-                    var n;
-                    t.preventDefault(), n = e(this).parent(), e(n).next("ul").length > 0 ? (e(n).parent().toggleClass(a.subMenuParentToggle), e(n).next("ul").slideToggle(a.toggleSpeed), e(n).next("ul").toggleClass(a.subMenuToggleClass)) : e(n).prev("ul").length > 0 && (e(n).parent().toggleClass(a.subMenuParentToggle), e(n).prev("ul").slideToggle(a.toggleSpeed), e(n).prev("ul").toggleClass(a.subMenuToggleClass))
-                }))
-            })), e(a.menuToggleBtn).each((function () {
-                e(this).on("click", (function () {
-                    n()
-                }))
-            })), t.on("click", (function (e) {
-                e.stopPropagation(), n()
-            })), t.find("div").on("click", (function (e) {
-                e.stopPropagation()
-            }))
-        }))
-    }, e(".th-menu-wrapper").thmobilemenu(), e(window).scroll((function () {
-        e(this).scrollTop() > 500 ? (e(".sticky-wrapper").addClass("sticky"), e(".category-menu").addClass("close-category")) : (e(".sticky-wrapper").removeClass("sticky"), e(".category-menu").removeClass("close-category"))
-    })), e(".menu-expand").each((function () {
-        e(this).on("click", (function (t) {
-            t.preventDefault(), e(".category-menu").toggleClass("open-category")
-        }))
-    })), e(".scroll-top").length > 0) {
-        var t = document.querySelector(".scroll-top"),
-            a = document.querySelector(".scroll-top path"),
-            n = a.getTotalLength();
-        a.style.transition = a.style.WebkitTransition = "none", a.style.strokeDasharray = n + " " + n, a.style.strokeDashoffset = n, a.getBoundingClientRect(), a.style.transition = a.style.WebkitTransition = "stroke-dashoffset 10ms linear";
-        var o = function () {
-            var t = e(window).scrollTop(),
-                o = e(document).height() - e(window).height(),
-                s = n - t * n / o;
-            a.style.strokeDashoffset = s
-        };
-        o(), e(window).scroll(o);
-        jQuery(window).on("scroll", (function () {
-            jQuery(this).scrollTop() > 50 ? jQuery(t).addClass("show") : jQuery(t).removeClass("show")
-        })), jQuery(t).on("click", (function (e) {
-            return e.preventDefault(), jQuery("html, body").animate({
-                scrollTop: 0
-            }, 750), !1
-        }))
-    }
-    e("[data-bg-src]").length > 0 && e("[data-bg-src]").each((function () {
-        var t = e(this).attr("data-bg-src");
-        e(this).css("background-image", "url(" + t + ")"), e(this).removeAttr("data-bg-src").addClass("background-image")
-    })), e("[data-bg-color]").length > 0 && e("[data-bg-color]").each((function () {
-        var t = e(this).attr("data-bg-color");
-        e(this).css("background-color", t), e(this).removeAttr("data-bg-color")
-    })), e("[data-border]").each((function () {
-        var t = e(this).data("border");
-        e(this).css("--th-border-color", t)
-    })), e("[data-mask-src]").length > 0 && e("[data-mask-src]").each((function () {
-        var t = e(this).attr("data-mask-src");
-        e(this).css({
-            "mask-image": "url(" + t + ")",
-            "-webkit-mask-image": "url(" + t + ")"
-        }), e(this).addClass("bg-mask"), e(this).removeAttr("data-mask-src")
-    })), e(".th-slider").each((function () {
-        var t = e(this),
-            a = e(this).data("slider-options"),
-            n = t.find(".slider-prev"),
-            o = t.find(".slider-next"),
-            s = t.find(".slider-pagination"),
-            i = a.autoplay,
-            r = {
-                slidesPerView: 1,
-                spaceBetween: a.spaceBetween ? a.spaceBetween : 24,
-                loop: 0 != a.loop,
-                parallax: 0 != a.parallax,
-                speed: a.speed ? a.speed : 1500,
-                autoplay: i || {
-                    delay: 6500,
-                    disableOnInteraction: !1
-                },
-                navigation: {
-                    nextEl: o.get(0),
-                    prevEl: n.get(0)
-                },
-                pagination: {
-                    el: s.get(0),
-                    clickable: !0,
-                    renderBullet: function (e, t) {
-                        return '<span class="' + t + '" aria-label="Go to Slide ' + (e + 1) + '"></span>'
-                    }
-                }
-            },
-            l = JSON.parse(t.attr("data-slider-options"));
-        l = e.extend({}, r, l);
-        new Swiper(t.get(0), l);
-        e(".slider-area").length > 0 && e(".slider-area").closest(".container").parent().addClass("arrow-wrap")
-    }));
-    var s = new Swiper(".hero-slider-1", {
-        loop: !0,
-        parallax: !0,
-        speed: 1500,
-        autoplay: {
-            delay: 6500,
-            disableOnInteraction: !1
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-    });
-    s = new Swiper(".thumbsSlider", {
-        loop: !0,
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: !0,
-        watchSlidesProgress: !0
-    }), new Swiper(".hero-slider2", {
-        loop: !0,
-        parallax: !0,
-        speed: 1500,
-        autoplay: {
-            delay: 6500,
-            disableOnInteraction: !1
-        },
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        thumbs: {
-            swiper: s
-        }
-    }), s = new Swiper(".hero-slider-3", {
-        loop: !0,
-        parallax: !0,
-        speed: 1500,
-        autoplay: {
-            delay: 6500,
-            disableOnInteraction: !1
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-    });
-    e("[data-ani]").each((function () {
-        var t = e(this).data("ani");
-        e(this).addClass(t)
-    })), e("[data-ani-delay]").each((function () {
-        var t = e(this).data("ani-delay");
-        e(this).css("animation-delay", t)
-    })), e("[data-slider-prev], [data-slider-next]").on("click", (function () {
-        var t = e(this).data("slider-prev") || e(this).data("slider-next"),
-            a = e(t);
-        if (a.length) {
-            var n = a[0].swiper;
-            n && (e(this).data("slider-prev") ? n.slidePrev() : n.slideNext())
-        }
-    }));
-    var i, r, l, c = ".ajax-contact",
-        d = '[name="email"]',
-        p = e(".form-messages");
 
-    function u() {
-        var t = e(c).serialize();
-        (function () {
-            var t, a = !0;
-
-            function n(n) {
-                n = n.split(",");
-                for (var o = 0; o < n.length; o++) t = c + " " + n[o], e(t).val() ? (e(t).removeClass("is-invalid"), a = !0) : (e(t).addClass("is-invalid"), a = !1)
-            }
-            n('[name="name"],[name="email"],[name="subject"],[name="number"],[name="message"]'), e(d).val() && e(d).val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/) ? (e(d).removeClass("is-invalid"), a = !0) : (e(d).addClass("is-invalid"), a = !1);
-            return a
-        })() && jQuery.ajax({
-            url: e(c).attr("action"),
-            data: t,
-            type: "POST"
-        }).done((function (t) {
-            p.removeClass("error"), p.addClass("success"), p.text(t), e(c + ' input:not([type="submit"]),' + c + " textarea").val("")
-        })).fail((function (e) {
-            p.removeClass("success"), p.addClass("error"), "" !== e.responseText ? p.html(e.responseText) : p.html("Oops! An error occured and your message could not be sent.")
-        }))
-    }
-
-    function h(t, a, n, o) {
-        e(a).on("click", (function (a) {
-            a.preventDefault(), e(t).addClass(o)
-        })), e(t).on("click", (function (a) {
-            a.stopPropagation(), e(t).removeClass(o)
-        })), e(t + " > div").on("click", (function (a) {
-            a.stopPropagation(), e(t).addClass(o)
-        })), e(n).on("click", (function (a) {
-            a.preventDefault(), a.stopPropagation(), e(t).removeClass(o)
-        }))
-    }
-
-    function h(t, a, n, o) {
-        e(a).on("click", (function (a) {
-            a.preventDefault(), e(t).addClass(o)
-        })), e(t).on("click", (function (a) {
-            a.stopPropagation(), e(t).removeClass(o)
-        })), e(t + " > div").on("click", (function (a) {
-            a.stopPropagation(), e(t).addClass(o)
-        })), e(n).on("click", (function (a) {
-            a.preventDefault(), a.stopPropagation(), e(t).removeClass(o)
-        }))
-    }
-
-    function g(e) {
-        return parseInt(e, 10)
-    }
-    e(c).on("submit", (function (e) {
-        e.preventDefault(), u()
-    })), i = ".popup-search-box", r = ".searchClose", l = "show", e(".searchBoxToggler").on("click", (function (t) {
-        t.preventDefault(), e(i).addClass(l)
-    })), e(i).on("click", (function (t) {
-        t.stopPropagation(), e(i).removeClass(l)
-    })), e(i).find("form").on("click", (function (t) {
-        t.stopPropagation(), e(i).addClass(l)
-    })), e(r).on("click", (function (t) {
-        t.preventDefault(), t.stopPropagation(), e(i).removeClass(l)
-    })), h(".sidemenu-wrapper", ".sideMenuToggler", ".sideMenuCls", "show"), h(".shopping-cart", ".sideMenuToggler2", ".sideMenuCls", "show"), e(".popup-image").magnificPopup({
-        type: "image",
-        mainClass: "mfp-zoom-in",
-        removalDelay: 260,
-        gallery: {
-            enabled: !0
-        }
-    }), e(".popup-video").magnificPopup({
-        type: "iframe"
-    }), e(".popup-content").magnificPopup({
-        type: "inline",
-        midClick: !0
-    }), e(".hero-animated-bubble img").hover((function () {
-        e(this).addClass("bubble-burst")
-    })), e.fn.sectionPosition = function (t, a) {
-        e(this).each((function () {
-            var n, o, s, i, r, l = e(this);
-            n = Math.floor(l.height() / 2), o = l.attr(t), s = l.attr(a), i = g(e(s).css("padding-top")), r = g(e(s).css("padding-bottom")), "top-half" === o ? (e(s).css("padding-bottom", r + n + "px"), l.css("margin-top", "-" + n + "px")) : "bottom-half" === o && (e(s).css("padding-top", i + n + "px"), l.css("margin-bottom", "-" + n + "px"))
-        }))
+            e(a.menuToggleBtn).on("click", toggleMenu);
+        });
     };
-    e("[data-sec-pos]").length && e("[data-sec-pos]").imagesLoaded((function () {
-        e("[data-sec-pos]").sectionPosition("data-sec-pos", "data-pos-for")
-    })), e(".filter-active").imagesLoaded((function () {
-        if (e(".filter-active").length > 0) {
-            var t = e(".filter-active").isotope({
-                itemSelector: ".filter-item",
-                filter: "*",
-                masonry: {
-                    columnWidth: 1
-                }
-            });
-            e(".filter-menu-active").on("click", "button", (function () {
-                var a = e(this).attr("data-filter");
-                t.isotope({
-                    filter: a
-                })
-            })), e(".filter-menu-active").on("click", "button", (function (t) {
-                t.preventDefault(), e(this).addClass("active"), e(this).siblings(".active").removeClass("active")
-            }))
-        }
-    })), e(".masonary-active").imagesLoaded((function () {
-        e(".masonary-active").length > 0 && e(".masonary-active").isotope({
-            itemSelector: ".filter-item",
-            filter: "*",
-            masonry: {
-                columnWidth: 1
-            }
-        })
-    })), e(".masonary-active, .woocommerce-Reviews .comment-list").imagesLoaded((function () {
-        var t = ".masonary-active, .woocommerce-Reviews .comment-list";
-        e(t).length > 0 && e(t).isotope({
-            itemSelector: ".filter-item, .woocommerce-Reviews .comment-list li",
-            filter: "*",
-            masonry: {
-                columnWidth: 1
-            }
-        }), e('[data-bs-toggle="tab"]').on("shown.bs.tab", (function (a) {
-            e(t).isotope({
-                filter: "*"
-            })
-        }))
-    })), e(".counter-number").counterUp({
-        delay: 10,
-        time: 1e3
-    }), e.fn.shapeMockup = function () {
-        e(this).each((function () {
-            var t = e(this),
-                a = t.data("top"),
-                n = t.data("right"),
-                o = t.data("bottom"),
-                s = t.data("left");
-            t.css({
-                top: a,
-                right: n,
-                bottom: o,
-                left: s
-            }).removeAttr("data-top").removeAttr("data-right").removeAttr("data-bottom").removeAttr("data-left").parent().addClass("shape-mockup-wrap")
-        }))
-    }, e(".shape-mockup") && e(".shape-mockup").shapeMockup(), e(".progress-bar").waypoint((function () {
-        e(".progress-bar").css({
-            animation: "animate-positive 1.8s",
-            opacity: "1"
-        })
-    }), {
-        offset: "75%"
-    }), e.fn.countdown = function () {
-        e(this).each((function () {
-            var t = e(this),
-                a = new Date(t.data("offer-date")).getTime();
 
-            function n(e) {
-                return t.find(e)
-            }
-            var o = setInterval((function () {
-                var e = (new Date).getTime(),
-                    s = a - e,
-                    i = Math.floor(s / 864e5),
-                    r = Math.floor(s % 864e5 / 36e5),
-                    l = Math.floor(s % 36e5 / 6e4),
-                    c = Math.floor(s % 6e4 / 1e3);
-                i < 10 && (i = "0" + i), r < 10 && (r = "0" + r), l < 10 && (l = "0" + l), c < 10 && (c = "0" + c), s < 0 ? (clearInterval(o), t.addClass("expired"), t.find(".message").css("display", "block")) : (n(".day").html(i), n(".hour").html(r), n(".minute").html(l), n(".seconds").html(c))
-            }), 1e3)
-        }))
-    }, e(".counter-list").length && e(".counter-list").countdown();
-    const m = {};
+    e(".th-menu-wrapper").thmobilemenu();
 
-    function f() {
-        const t = e(this),
-            a = t.attr("src");
-        if (!m[a]) {
-            const t = e.Deferred();
-            e.get(a, a => {
-                t.resolve(e(a).find("svg"))
-            }), m[a] = t.promise()
+    /* ================= STICKY HEADER ================= */
+    e(window).scroll(function () {
+        if (e(this).scrollTop() > 500) {
+            e(".sticky-wrapper").addClass("sticky");
+        } else {
+            e(".sticky-wrapper").removeClass("sticky");
         }
-        m[a].then(a => {
-            const n = e(a).clone();
-            t.attr("id") && n.attr("id", t.attr("id")), t.attr("class") && n.attr("class", t.attr("class")), t.attr("style") && n.attr("style", t.attr("style")), t.attr("width") && (n.attr("width", t.attr("width")), t.attr("height") || n.removeAttr("height")), t.attr("height") && (n.attr("height", t.attr("height")), t.attr("width") || n.removeAttr("width")), n.insertAfter(t), t.trigger("svgInlined", n[0]), t.remove()
-        })
+    });
+
+    /* ================= SWIPER ================= */
+    if (typeof Swiper !== "undefined") {
+        new Swiper("#serviceSlider1", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1200: { slidesPerView: 3 }
+            }
+        });
     }
-    // e.fn.inlineSvg = function () {
-    //     return this.each(f), this
-    // }, e(".svg-img").inlineSvg(), e("#ship-to-different-address-checkbox").on("change", (function () {
-    //     e(this).is(":checked") ? e("#ship-to-different-address").next(".shipping_address").slideDown() : e("#ship-to-different-address").next(".shipping_address").slideUp()
-    // })), e(".woocommerce-form-login-toggle a").on("click", (function (t) {
-    //     t.preventDefault(), e(".woocommerce-form-login").slideToggle()
-    // })), e(".woocommerce-form-coupon-toggle a").on("click", (function (t) {
-    //     t.preventDefault(), e(".woocommerce-form-coupon").slideToggle()
-    // })), e(".shipping-calculator-button").on("click", (function (t) {
-    //     t.preventDefault(), e(this).next(".shipping-calculator-form").slideToggle()
-    // })), e('.wc_payment_methods input[type="radio"]:checked').siblings(".payment_box").show(), e('.wc_payment_methods input[type="radio"]').each((function () {
-    //     e(this).on("change", (function () {
-    //         e(".payment_box").slideUp(), e(this).siblings(".payment_box").slideDown()
-    //     }))
-    // })), e(".rating-select .stars a").each((function () {
-    //     e(this).on("click", (function (t) {
-    //         t.preventDefault(), e(this).siblings().removeClass("active"), e(this).parent().parent().addClass("selected"), e(this).addClass("active")
-    //     }))
-    // })), e(".quantity-plus").each((function () {
-    //     e(this).on("click", (function (t) {
-    //         t.preventDefault();
-    //         var a = e(this).siblings(".qty-input"),
-    //             n = parseInt(a.val(), 10);
-    //         isNaN(n) || a.val(n + 1)
-    //     }))
-    // })), e(".quantity-minus").each((function () {
-    //     e(this).on("click", (function (t) {
-    //         t.preventDefault();
-    //         var a = e(this).siblings(".qty-input"),
-    //             n = parseInt(a.val(), 10);
-    //         !isNaN(n) && n > 1 && a.val(n - 1)
-    //     }))
-    // })), window.addEventListener("contextmenu", (function (e) {
-    //     e.preventDefault()
-    // }), !1), document.onkeydown = function (e) {
-    //     return 123 != event.keyCode && ((!e.ctrlKey || !e.shiftKey || e.keyCode != "I".charCodeAt(0)) && ((!e.ctrlKey || !e.shiftKey || e.keyCode != "C".charCodeAt(0)) && ((!e.ctrlKey || !e.shiftKey || e.keyCode != "J".charCodeAt(0)) && ((!e.ctrlKey || e.keyCode != "U".charCodeAt(0)) && void 0))))
-    // }
+
 }(jQuery);
 
 
+/* =========================================
+   🔐 LOGIN SYSTEM (MAIN FEATURE)
+========================================= */
 
-
-
-
-
-
-
+// LOGIN STATE
+let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -431,30 +85,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const goSignup = document.getElementById("goSignup");
     const goLogin = document.getElementById("goLogin");
 
-    // OPEN MODAL
-    userIcon.addEventListener("click", () => {
-        modal.style.display = "flex";
+    /* ================= USER ICON CLICK ================= */
+    if (userIcon) {
+        userIcon.addEventListener("click", function (e) {
+            e.preventDefault();
 
-        // Always show login first
-        showLogin();
-    });
+            if (!isLoggedIn) {
+                modal.style.display = "flex";
+                showLogin();
+            } else {
+                window.location.href = "dashboard.html";
+            }
+        });
+    }
 
-    // CLOSE BUTTON
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+    /* ================= CLOSE MODAL ================= */
+    if (closeBtn) {
+        closeBtn.onclick = () => modal.style.display = "none";
+    }
 
-    // CLOSE OUTSIDE
-    window.addEventListener("click", (e) => {
+    window.onclick = function (e) {
         if (e.target === modal) {
             modal.style.display = "none";
         }
-    });
+    };
 
-    // FUNCTIONS
+    /* ================= TAB SWITCH ================= */
     function showLogin() {
         loginForm.classList.add("active");
         signupForm.classList.remove("active");
+
         loginTab.classList.add("active");
         signupTab.classList.remove("active");
     }
@@ -462,262 +122,101 @@ document.addEventListener("DOMContentLoaded", function () {
     function showSignup() {
         signupForm.classList.add("active");
         loginForm.classList.remove("active");
+
         signupTab.classList.add("active");
         loginTab.classList.remove("active");
     }
 
-    // TAB SWITCH
-    loginTab.addEventListener("click", showLogin);
-    signupTab.addEventListener("click", showSignup);
+    if (loginTab) loginTab.onclick = showLogin;
+    if (signupTab) signupTab.onclick = showSignup;
+    if (goSignup) goSignup.onclick = showSignup;
+    if (goLogin) goLogin.onclick = showLogin;
 
-    // LINKS SWITCH
-    goSignup.addEventListener("click", showSignup);
-    goLogin.addEventListener("click", showLogin);
+    /* ================= LOGIN ================= */
+    const loginBtn = document.querySelector("#loginForm button");
 
-});
-// ===== HERO ANIMATION REPLAY =====
-document.addEventListener("DOMContentLoaded", function () {
+    if (loginBtn) {
+        loginBtn.addEventListener("click", function (e) {
+            e.preventDefault();
 
-    const heroSection = document.getElementById("hero");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                // Reset animations
-                resetAnimations();
-
-                // Re-trigger animations
-                setTimeout(() => {
-                    triggerAnimations();
-                }, 100);
-            }
-
-        });
-    }, {
-        threshold: 0.4
-    });
-
-    observer.observe(heroSection);
-
-    function resetAnimations() {
-        document.querySelectorAll("#hero [data-ani]").forEach(el => {
-            el.style.animation = "none";
-            el.offsetHeight; // force reflow
-            el.style.animation = "";
+            localStorage.setItem("isLoggedIn", "true");
+            location.reload();
         });
     }
 
-    function triggerAnimations() {
-        document.querySelectorAll("#hero [data-ani]").forEach(el => {
-            const animation = el.getAttribute("data-ani");
-            const delay = el.getAttribute("data-ani-delay") || "0s";
+    /* ================= SIGNUP ================= */
+    const signupBtn = document.querySelector("#signupForm button");
 
-            el.style.animation = `${animation} 0.8s ease forwards`;
-            el.style.animationDelay = delay;
-        });
-    }
+    if (signupBtn) {
+        signupBtn.addEventListener("click", function (e) {
+            e.preventDefault();
 
-});
-// ==============hero animation edn =============
-// -===================about us ===========
-document.addEventListener("DOMContentLoaded", function () {
-
-    const section = document.querySelector(".about-section");
-
-    if (!section) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.classList.add("about-active");
-            } else {
-                entry.target.classList.remove("about-active");
-            }
-
-        });
-    }, {
-        threshold: 0.3
-    });
-
-    observer.observe(section);
-});
-// ========about us animations end======
-// INIT SWIPER
-const swiper = new Swiper("#serviceSlider1", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: false,
-
-    breakpoints: {
-        0: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1200: { slidesPerView: 3 }
-    }
-});
-
-// SELECT ARROWS
-const prevBtn = document.querySelector(".custom-arrow.prev");
-const nextBtn = document.querySelector(".custom-arrow.next");
-
-// CLICK EVENTS
-prevBtn.addEventListener("click", () => {
-    swiper.slidePrev();
-});
-
-nextBtn.addEventListener("click", () => {
-    swiper.slideNext();
-});
-
-// DISABLE LOGIC
-function updateArrows() {
-    prevBtn.classList.toggle("disabled", swiper.isBeginning);
-    nextBtn.classList.toggle("disabled", swiper.isEnd);
-}
-
-// INIT + UPDATE
-updateArrows();
-swiper.on("slideChange", updateArrows);
-// =============package cards animations============
-document.addEventListener("DOMContentLoaded", function () {
-
-    const section = document.querySelector(".price-section");
-
-    if (!section) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                section.classList.add("price-section-active");
-            } else {
-                section.classList.remove("price-section-active");
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    observer.observe(section);
-
-    // 🔥 SAFETY NET (MOBILE FIX)
-    setTimeout(() => {
-        section.classList.add("price-section-active");
-    }, 500);
-
-});
-
-
-// =========monthly packages =====
-document.addEventListener("DOMContentLoaded", function () {
-
-    const popup = document.querySelector(".side-popup");
-
-    // hide first
-    popup.style.opacity = "0";
-
-    setTimeout(() => {
-        popup.style.opacity = "1";
-        popup.style.transition = "0.5s ease";
-    }, 2000);
-
-});
-// =============user dropdown============
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const userToggle = document.querySelector(".user-toggle");
-    const wrapper = document.querySelector(".user-wrapper");
-
-    userToggle.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // ❌ NOT LOGGED IN → OPEN LOGIN POPUP
-        if (!isLoggedIn) {
-            document.getElementById("modal").style.display = "flex";
-            return;
-        }
-
-        // ✅ LOGGED IN → TOGGLE DASHBOARD MENU
-        wrapper.classList.toggle("active");
-    });
-
-    // close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-        if (wrapper && !wrapper.contains(e.target)) {
-            wrapper.classList.remove("active");
-        }
-    });
-
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const modal = document.getElementById("modal");
-    const userIcon = document.getElementById("userIcon");
-    const closeBtn = document.querySelector(".close");
-
-    const loginTab = document.getElementById("loginTab");
-    const signupTab = document.getElementById("signupTab");
-
-    const loginForm = document.getElementById("loginForm");
-    const signupForm = document.getElementById("signupForm");
-
-    const goSignup = document.getElementById("goSignup");
-    const goLogin = document.getElementById("goLogin");
-
-    const modalTitle = document.getElementById("modalTitle");
-
-    // OPEN MODAL
-    if (userIcon) {
-        userIcon.addEventListener("click", () => {
-            modal.style.display = "flex";
+            alert("Signup successful! Please login.");
             showLogin();
         });
     }
 
-    // CLOSE MODAL
-    closeBtn.addEventListener("click", () => {
+});
+
+
+/* ================= LOGOUT ================= */
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "index.html";
+}
+
+
+/* =========================================
+   🎯 EXTRA ANIMATIONS (SAFE VERSION)
+========================================= */
+
+// HERO ANIMATION
+document.addEventListener("DOMContentLoaded", function () {
+    const hero = document.getElementById("hero");
+    if (!hero) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                hero.classList.add("active");
+            }
+        });
+    });
+
+    observer.observe(hero);
+});
+
+// ABOUT SECTION
+document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".about-section");
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            section.classList.toggle("about-active", entry.isIntersecting);
+        });
+    });
+
+    observer.observe(section);
+});
+
+
+
+// ===================modal popup==========
+// OPEN MODAL
+function openBookingModal() {
+    document.getElementById("bookingModal").style.display = "block";
+}
+
+// CLOSE MODAL
+function closeBookingModal() {
+    document.getElementById("bookingModal").style.display = "none";
+}
+
+// CLOSE WHEN CLICK OUTSIDE
+window.addEventListener("click", function (e) {
+    const modal = document.getElementById("bookingModal");
+    if (e.target === modal) {
         modal.style.display = "none";
-    });
-
-    // CLOSE OUTSIDE CLICK
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-    // SHOW LOGIN
-    function showLogin() {
-        loginForm.classList.add("active");
-        signupForm.classList.remove("active");
-
-        loginTab.classList.add("active");
-        signupTab.classList.remove("active");
-
-        modalTitle.innerText = "Login";
     }
-
-    // SHOW SIGNUP
-    function showSignup() {
-        signupForm.classList.add("active");
-        loginForm.classList.remove("active");
-
-        signupTab.classList.add("active");
-        loginTab.classList.remove("active");
-
-        modalTitle.innerText = "Sign Up";
-    }
-
-    // TAB CLICK EVENTS
-    loginTab.addEventListener("click", showLogin);
-    signupTab.addEventListener("click", showSignup);
-
-    // TEXT LINK SWITCH
-    goSignup.addEventListener("click", showSignup);
-    goLogin.addEventListener("click", showLogin);
-
 });
